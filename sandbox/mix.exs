@@ -27,11 +27,11 @@ defmodule Sandbox.MixProject do
   end
 end
 
-  defmodule ExampleApp.CLI do
-    def main(args \\ []) do
+  # defmodule ExampleApp.CLI do
+  #   def main(_args \\ []) do
 
-    end
-  end
+  #   end
+  # end
 
   defmodule ExampleApp.Mixproject do
     def project do
@@ -61,4 +61,8 @@ end
     defp response({opts, word}) do
       if opts[:upcase], do: String.upcase(word), else: word
     end
+  end
+
+  defmodule Example do
+    def explode, do: exit(:kaboom)
   end
