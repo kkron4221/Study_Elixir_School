@@ -12,3 +12,21 @@
 // %{"a" => 1, "b" => 2}
 // iex(7)> Enum.map(map, fn{k, v} -> {k, v * 2} end)
 // [{"a", 2}, {"b", 4}]
+
+// iex(5)> Enum.all?([1, 2, 3])
+// true    
+// iex(6)> Enum.all?([1, nil, 3])
+// false   
+// iex(7)> Enum.all?([])
+// true
+// iex(8)> Enum.all?(["hoge
+// ...(8)> ", "a", "test"])
+// true
+// iex(9)> Enum.all?(["hoge", 2, "test"])
+// true
+// iex(10)> Enum.all?([1, 2, false])
+// false
+// iex(11)> range = 1..5
+// 1..5
+// iex(12)> Enum.map(range, &(&1 * 2))
+// [2, 4, 6, 8, 10]

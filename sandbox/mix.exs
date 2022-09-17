@@ -86,25 +86,25 @@ end
   end
 
 
-  # # GenServer
-  # defmodule SimpleQueue do
-  #   use GenServer
+  # GenServer
+  defmodule SimpleQueue do
+    use GenServer
 
-  #   @doc """
-  #   キューを開始し、リンクします。
-  #   これはヘルパー関数です。
-  #   """
+    @doc """
+    キューを開始し、リンクします。
+    これはヘルパー関数です。
+    """
 
-  #   def start_link(state \\ []) do
-  #     GenServer.start_link(__MODULE__, state, neme: __MODULE__)
-  #   end
+    def start_link(state \\ []) do
+      GenServer.start_link(__MODULE__, state, neme: __MODULE__)
+    end
 
-  #   @doc """
-  #   GenServer.init/1コールバック
-  #   """
+    @doc """
+    GenServer.init/1コールバック
+    """
 
-  #   def init(state), do: {:ok, state}
-  # end
+    def init(state), do: {:ok, state}
+  end
 
   defmodule SimpleQueue do
     use GenServer
@@ -117,7 +117,7 @@ end
     def init(state), do: {:ok, state}
 
     @doc """
-    GenServer.handle_call/3コールバック
+    GenServer.handle_call/3コールバックg
     """
 
     def handle_call(:dequeue, __from, [value | state]) do
