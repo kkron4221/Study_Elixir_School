@@ -30,3 +30,19 @@
 // 1..5
 // iex(12)> Enum.map(range, &(&1 * 2))
 // [2, 4, 6, 8, 10]
+
+// Study Enum.all?() and Enum.any?()
+// $ iex
+// Interactive Elixir (1.13.4) - press Ctrl+C to exit (type h() ENTER for help)
+// iex(1)> Enum.all?([2, 4, 6], fn x -> rem(x, 2) == 0 end)
+// true
+// iex(2)> Enum.all?([2, 3, 4], fn x -> rem(x, 2) == 0 end)
+// false
+// iex(3)> Enum.all?([], fn _ -> nil end)
+// true
+// iex(4)> Enum.any?([false, false, false])
+// false
+// iex(5)> Enum.any?([false, true, false])
+// true
+// iex(6)> Enum.any?(["x", false])
+// true
