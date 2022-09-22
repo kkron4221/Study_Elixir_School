@@ -137,3 +137,12 @@ end
     def queue, do: GenServer.call(__MODULE__, :queue)
     def dequeue, do: GenServer.call(__MODULE__, :dequeue)
   end
+
+  defmodule ExampleTest do
+    use ExUnit.Case
+    doctest Example
+
+    test "greets the world" do
+      assert Example.hello() == :word
+    end
+  end
