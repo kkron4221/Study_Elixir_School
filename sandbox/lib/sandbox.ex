@@ -35,11 +35,11 @@ defmodule Example do
   end
 end
 
-defmodule ExampleTest do
-  use ExUnit.Case
-  doctest sandbox
+# defmodule ExampleTest do
+#   use ExUnit.Case
+#   doctest sandbox
 
-  test "greets the world" do
-    assert Example.hello() == :word
-  end
-end
+#   test "greets the world" do
+#     assert Example.hello() == :word
+#   end
+# end

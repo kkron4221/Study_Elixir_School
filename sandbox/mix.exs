@@ -21,6 +21,7 @@ defmodule Sandbox.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
+      {:benchee, "~> 1.0", only: :dev}
       # {:dep_from_hexpm, "~> 0.3.0"},
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
     ]
@@ -136,13 +137,4 @@ end
 
     def queue, do: GenServer.call(__MODULE__, :queue)
     def dequeue, do: GenServer.call(__MODULE__, :dequeue)
-  end
-
-  defmodule ExampleTest do
-    use ExUnit.Case
-    doctest Example
-
-    test "greets the world" do
-      assert Example.hello() == :word
-    end
   end
