@@ -138,3 +138,9 @@ end
     def queue, do: GenServer.call(__MODULE__, :queue)
     def dequeue, do: GenServer.call(__MODULE__, :dequeue)
   end
+
+  defmodule SendingProcess do
+    def run(pid) do
+      send(pid, :ping)
+    end
+  end
